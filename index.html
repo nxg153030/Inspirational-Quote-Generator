@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+
+<style>
+.box{
+ background-color: hsla(120, 100%, 90%, 0.3);
+ border-style: outset;
+ border-color: grey;
+ border-width: 6px;
+ padding: 35px;
+ margin: 40px 280px 20px 280px;
+ text-align: center;
+}
+button{
+  margin: 20px 40px 40px 720px;
+}
+h1{
+  font-family: Times New Roman;
+}
+body{
+background-color: hsla(0, 100%, 50%, 0.3);  
+}
+
+</style>
+
+<body>
+  <h1 class="text-center"> Inspirational Quote Generator </h1>
+  <div class="box message">
+  </div>
+  <button id="getQuote" class="btn btn-primary"> New Quote </button>
+</body>
+
+
+<script>
+var quotes = ["How you do anything is how you do everything. - Anonymous", "Never regret something that once made you smile. - Amber Deckers", "In three words I can sum up everything I've learning about life: it goes on. - Robert Frost", "Success is no accident. It is hard work, perseverence, studying, sacrifice and most of all, love of what you are doing or learning to do. - Pele", "I've failed over and over and over again in my life and that is why I succeed. - Michael Jordan", "Eighty percent of success is showing up. - Woody Allen", "What makes something special is not just what you have to gain, but what you feel there is to lose. - Andre Agassi", "Push yourself again and again. Don't give an inch until the final buzzer sounds. - Larry Bird","I hated every minute of training, but I said 'Don't quit. Suffer now and live the rest of your life as a champion. - Muhammad Ali", "One important key to success is self-confidence. An important key to self-confidence is preparation. - Arthur Ashe", "Action is the foundational key to all success. - Pablo Picasso", "Talent without working hard is nothing. - Cristiano Ronaldo", "Success is not final, failure is not fatal: it is the courage to continue that counts. - Winston Churchill", "My great concern is not whether you have failed, but whether you are content with your failure. - Abraham Lincoln", "Patience, persistence and perspiration make an unbeatable combination for success. - Napoleon Hill", "Give the world the best you have and you may get hurt. Give the world your best anyway. - Mother Theresa", "Don’t let the fear of the time it will take to accomplish something stand in the way of your doing it. The time will pass anyway; we might just as well put that passing time to the best possible use. - Earl Nightingale"];
+$(document).ready(function() {
+  $("#getQuote").on("click", function(){
+  $(".message").html(quotes[Math.floor(Math.random()*quotes.length)]);
+  }); 
+});
+</script>
+</html>
